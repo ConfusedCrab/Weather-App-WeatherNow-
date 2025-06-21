@@ -1,0 +1,134 @@
+.mobile-container {
+    background: transparent;
+    padding: 2rem;
+    border: 2px solid rgb(213, 188, 188);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.mobile-search-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#city-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid rgb(213, 188, 188);
+}
+
+#search-btn {
+    background: #0083b0;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#search-btn:hover {
+    background: #006688;
+}
+
+.mobile-weather-box {
+    text-align: center;
+}
+
+.mobile-weather-details {
+    margin-bottom: 2rem;
+}
+
+#weather-icon {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+#temperature {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#city {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+#description {
+    color: #888;
+    text-transform: capitalize;
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(213, 188, 188);
+}
+
+.mobile-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mobile-info-item i {
+    font-size: 1.2rem;
+    color: #0083b0;
+}
+
+.mobile-info-item span {
+    font-size: 0.9rem;
+    color: #666;
+} 
+
+/* responsiveness */
+@media (max-width: 350px) {
+    .mobile-container {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    .mobile-search-box {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    #city-input, #search-btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    #temperature {
+        font-size: 2.2rem;
+    }
+
+    #city {
+        font-size: 1.2rem;
+    }
+
+    .weather-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .mobile-info-item span {
+        font-size: 0.8rem;
+    }
+
+    #weather-icon {
+        width: 80px;
+    }
+}
+

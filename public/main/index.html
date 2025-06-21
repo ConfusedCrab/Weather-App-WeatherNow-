@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>Weather Now</title>
+
+  <!-- FontAwesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/main/style.css">
+<link rel="stylesheet" href="/main/tabStyle.css">
+<link rel="stylesheet" href="/main/MobileStyle.css">
+
+
+</head>
+
+<body>
+
+  <header class="app-header">
+    <h1>WeatherNow</h1>
+    <p>Get real-time weather updates worldwide</p>
+
+    <!-- contact modal  -->
+    <!-- Contact Button -->
+    <button id="contactBtn" class="contact-btn"><img src="../asset/icons/iconmonstr-telegram-4.svg "
+        alt="contact-us"></button>
+    <!-- Modal Overlay -->
+    <div id="contactModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Contact Us</h2>
+       <form id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="mobile">
+    <div class="mobile-container">
+      <div class="mobile-search-box">
+        <input type="text" placeholder="Enter city name" id="city-input">
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="mobile-weather-box">
+        <div class="mobile-weather-details">
+          <img src="../asset/images/6.png" alt="weather icon" id="weather-icon">
+          <h2 id="temperature">--°C</h2>
+          <h3 id="city"></h3>
+          <p id="description"></p>
+        </div>
+
+        <div class="weather-info">
+          <div class="mobile-info-item">
+            <i class="fas fa-wind"></i>
+            <span id="wind">Wind: -- km/h</span>
+          </div>
+          <div class="mobile-info-item">
+            <i class="fas fa-tint"></i>
+            <span id="humidity">Humidity: --%</span>
+          </div>
+          <div class="mobile-info-item">
+            <i class="fas fa-compress-arrows-alt"></i>
+            <span id="pressure">Pressure: -- hPa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="tab">
+    <div class="tab-search">
+      <div class="input-group">
+        <label class="input-label" for="city">Enter city name</label>
+
+        <div class="search-wrapper">
+          <!-- Text input for city name -->
+          <input aria-label="Enter city name" id="tab-city" placeholder="For example, Delhi" type="text" />
+
+          <button aria-label="Search" class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <!--  Local time  -->
+      <div aria-live="polite" class="local-time">
+        local time: Tue, 21:45
+      </div>
+    </div>
+
+    <!-- Weather Card -->
+    <section aria-label="Current weather" class="weather-card">
+      <div class="card-header">
+        <!-- City name + country code -->
+        <div class="city_name"></div>
+
+        <!--local location time -->
+        <div class="time">
+        </div>
+      </div>
+
+      <div class="temp-row">
+        <div class="temp">
+          --°
+        </div>
+        <img alt="Weather icon showing partly cloudy with sun" src="../asset/images/6.png" width="24" height="24"
+          class="weather-icon-tab" />
+      </div>
+
+      <!--  Weather description -->
+      <p class="feels-like">
+      </p>
+
+      <!-- Weather Details -->
+      <div class="tab-weather-details">
+        <!-- Wind speed -->
+        <div>
+          <span>Wind speed</span>
+          <span>-- m/s</span>
+        </div>
+
+        <!-- Cloud coverage -->
+        <div>
+          <span>Cloudiness</span>
+          <span>--%</span>
+        </div>
+
+        <!-- Gust speed -->
+        <div>
+          <span>Wind gusts</span>
+          <span>-- m/s</span>
+        </div>
+
+        <!-- Visibility -->
+        <div>
+          <span>Visibility</span>
+          <span>-- m</span>
+        </div>
+
+        <!-- Humidity -->
+        <div>
+          <span>Humidity</span>
+          <span>--%</span>
+        </div>
+
+        <!-- Pressure -->
+        <div>
+          <span>Pressure</span>
+          <span>-- hPa</span>
+        </div>
+
+        <!-- Sea leavel -->
+        <div>
+          <span>Sunrise</span>
+          <span>--AM</span>
+        </div>
+
+        <!-- Ground leavel -->
+        <div>
+          <span>Sunset</span>
+          <span>--PM</span>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 <strong>WeatherNow</strong>. Crafted with precision by Garvit. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <span>|</span>
+        <a href="#">Terms</a>
+        <span>|</span>
+        <a href="#" id="footerContactBtn">Contact Us</a>
+        <span>|</span>
+        <a href="https://github.com/ConfusedCrab">GitHub</a>
+        <span>|</span>
+        <a href="https://leetcode.com/u/ConfusedCrab/">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="/main/countryCode.js"></script>
+<script src="/main/script.js"></script>
+</body>
+
+</html>
