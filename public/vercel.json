@@ -1,0 +1,10 @@
+{
+  "builds": [
+    { "src": "api/weather.js", "use": "@vercel/node" },
+    { "src": "public/main/**/*", "use": "@vercel/static-build" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/weather.js" },
+    { "src": "/(.*)", "dest": "/public/main/index.html" }
+  ]
+}

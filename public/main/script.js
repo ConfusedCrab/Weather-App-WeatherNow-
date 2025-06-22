@@ -42,9 +42,8 @@ function hideLoading() {
 async function getWeatherData(cityName) {
      showLoading(); // Show loading before fetch
   try {
-    const response = await fetch(`/api/weather?city=${cityName}`
-
-    );
+    const response = await fetch(`/api/weather?city=${cityName}`);
+    
     if (!response.ok) {
         throw new Error('City not found');
     }

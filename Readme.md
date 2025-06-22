@@ -18,14 +18,25 @@
 ```bash
 ## 📁 Project Structure
 weather-now/
+├── api/
+│   └── weather.js         # Serverless API routes (Vercel)
 ├── public/
-│ └── main/ # HTML, CSS, JS, assets
-├── api/ # Serverless API routes (Vercel)
-│ └── weather.js
-├── .env # API key (not pushed)
+│   │── asset/
+│   │   └── icons/
+│   │   └── images/
+│   └── main/              # HTML, CSS, JS
+│       ├── index.html
+│       ├── script.js
+│       ├── style.css
+│       ├── tabStyle.css
+│       └── MobileStyle.css
+├── .env                   # API key (not pushed)
 ├── .gitignore
 ├── package.json
+├── package-lock.json
+├── vercel.json
 └── README.md
+
 ```
 
 ---
