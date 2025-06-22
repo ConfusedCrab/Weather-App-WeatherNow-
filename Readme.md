@@ -15,7 +15,7 @@
 -  Serverless-ready (Vercel compatible)
 
 ---
-
+```bash
 ## 📁 Project Structure
 weather-now/
 ├── public/
@@ -26,7 +26,7 @@ weather-now/
 ├── .gitignore
 ├── package.json
 └── README.md
-
+```
 
 ---
 
@@ -40,7 +40,7 @@ weather-now/
 ---
 
 ## License
-MIT License — feel free to fork, remix, and build upon it.
+MIT License — feel free to fork, remix, and build upon it.<br>
 Crafted by Garvit.
 
 
