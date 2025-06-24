@@ -5,6 +5,5 @@
   ],
   "routes": [
     { "src": "/api/weather", "dest": "api/weather.js" },
-    { "src": "/(.*)", "dest": "/public/main/$1" }
   ]
 }
