@@ -40,20 +40,20 @@ function hideLoading() {
 
 // it Fetch Weather Data 
 async function getWeatherData(cityName) {
-     showLoading(); // Show loading before fetch
-  try {
-    const response = await fetch(`/api/weather?city=${cityName}`);
-    
-    if (!response.ok) {
-        throw new Error('City not found');
-    }
+    showLoading(); // Show loading before fetch
+    try {
+        const response = await fetch(`/.netlify/functions/weather?city=${cityName}`);
 
-    const data = await response.json();
-     console.log('Fetched Weather Data:', data); //  This logs the full data object
-    updateWeatherUI(data);
-  } catch (error) {
-    alert(error.message);
-  }finally {
+        if (!response.ok) {
+            throw new Error('City not found');
+        }
+
+        const data = await response.json();
+        console.log('Fetched Weather Data:', data); //  This logs the full data object
+        updateWeatherUI(data);
+    } catch (error) {
+        alert(error.message);
+    } finally {
         hideLoading(); //  Always hide loading, success or fail
     }
 }
@@ -239,25 +239,25 @@ document.getElementById('footerContactBtn')?.addEventListener('click', (e) => {
 
 // for contact us form submission
 document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // ✋ prevent reload
+    e.preventDefault(); // ✋ prevent reload
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-  // Validate basic input (optional)
-  if (!name || !email || !message) {
-    alert('Please fill out all fields.');
-    return;
-  }
+    // Validate basic input (optional)
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;
+    }
 
-  // 👇 You can either:
-  // - log it (for now)
-  // - OR send it to a backend route via fetch()
-  console.log({ name, email, message });
+    // 👇 You can either:
+    // - log it (for now)
+    // - OR send it to a backend route via fetch()
+    console.log({ name, email, message });
 
-  // Optional: Show success message, reset form, close modal
-  alert("Message sent sussessfully");
-  e.target.reset();
-  document.getElementById('contactModal').style.display = 'none';
+    // Optional: Show success message, reset form, close modal
+    alert("Message sent sussessfully");
+    e.target.reset();
+    document.getElementById('contactModal').style.display = 'none';
 });

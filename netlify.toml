@@ -1,9 +1,8 @@
 [build]
-  functions = "netlify/functions"
   publish = "public"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/api/weather"
   to = "/.netlify/functions/weather"
   status = 200
-  
