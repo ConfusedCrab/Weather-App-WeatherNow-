@@ -6,3 +6,6 @@
   from = "/api/weather"
   to = "/.netlify/functions/weather"
   status = 200
+
+[functions]
+  directory = "netlify/functions"

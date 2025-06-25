@@ -42,6 +42,9 @@ function hideLoading() {
 async function getWeatherData(cityName) {
     showLoading(); // Show loading before fetch
     try {
+        // remove the comment when to use it locally in the system and exchange it with fetch(`/.netlify/functions/weather?city=${cityName}`); 
+        // fetch(`/api/weather?city=${cityName}`);
+
         const response = await fetch(`/.netlify/functions/weather?city=${cityName}`);
 
         if (!response.ok) {
