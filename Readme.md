@@ -18,23 +18,25 @@
 ```bash
 ## 📁 Project Structure
 weather-now/
-├── api/
-│   └── weather.js         # Serverless API routes (Vercel)
+├── netlify/
+│   └── functions/
+│       └── weather.js      ← Your serverless API function
 ├── public/
 │   │── asset/
 │   │   └── icons/
 │   │   └── images/
 │   └── main/              # HTML, CSS, JS
-│       ├── index.html
 │       ├── script.js
 │       ├── style.css
 │       ├── tabStyle.css
 │       └── MobileStyle.css
 ├── .env                   # API key (not pushed)
 ├── .gitignore
+├── index.html
 ├── package.json
 ├── package-lock.json
-├── vercel.json
+├── netlify.toml  
+├── server.js
 └── README.md
 
 ```
@@ -46,7 +48,6 @@ weather-now/
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Node.js (Express or Vercel functions)
 - **API**: [OpenWeatherMap](https://openweathermap.org/api)
-- **Deployment**: [Vercel](https://vercel.com/)
 
 ---
 
