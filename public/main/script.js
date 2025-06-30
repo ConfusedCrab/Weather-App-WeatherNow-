@@ -1,4 +1,3 @@
-
 // Mobile DOM elements
 const cityInputMobile = document.getElementById('city-input');
 const searchBtnMobile = document.getElementById('search-btn');
@@ -242,24 +241,21 @@ document.getElementById('footerContactBtn')?.addEventListener('click', (e) => {
 
 // for contact us form submission
 document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // ✋ prevent reload
+    e.preventDefault(); //  prevent reload
 
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    // Validate basic input (optional)
+    // Validate basic input 
     if (!name || !email || !message) {
         alert('Please fill out all fields.');
         return;
     }
 
-    // 👇 You can either:
-    // - log it (for now)
-    // - OR send it to a backend route via fetch()
     console.log({ name, email, message });
 
-    // Optional: Show success message, reset form, close modal
+    // Show success message, reset form, close modal
     alert("Message sent sussessfully");
     e.target.reset();
     document.getElementById('contactModal').style.display = 'none';

@@ -58,3 +58,28 @@ Crafted by Garvit.
 
 ---
 
+## Note
+If you want to run this weather app locally on your machine, here’s what you need to do:
+
+ 1. Move index.html to the main(name) folder 
+ Your folder structure should look like this:
+
+```bash
+weather-now/
+├── public/
+│   └── main/            # HTML, CSS, JS
+│        └── index.html       Move this here
+│
+├── .env            Add your API key here
+
+```
+ 2. Create a .env file (if not already)
+
+ OPENWEATHER_API_KEY=your_actual_api_key_here
+
+ 3. Start the local server
+ In your terminal: node server.js
+
+
+And no other changes in other  
+---
